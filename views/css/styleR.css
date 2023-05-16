@@ -1,0 +1,67 @@
+body {
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  .col-md-4 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-group {
+    margin-top: 20px;
+  }
+  
+  .form-control {
+    border-radius: 0px;
+  }
+  
+  .btn-success {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 0px;
+  }
+  
+  .mssg {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .bg-danger {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+  }
+  
+  #LangTable {
+    display: none;
+  }
+  
+  a {
+    color: #337ab7;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #23527c;
+    text-decoration: underline;
+  }
+  
+  #form p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #form span {
+    font-size: 14px;
+    display: block;
+    margin-top: 20px;
+  }
+  
