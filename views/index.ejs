@@ -6,7 +6,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 	</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="./css/styleR.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<!--<link rel="stylesheet" href="./css/styleR.css">-->
 	<!-- <link rel="./css/styleR.css"></link> -->
 
 
@@ -41,6 +42,12 @@
 			});
 		});
 	</script>
+	<style>
+		body {
+		   background-image: url('bg.jpeg');
+		   background-size: cover;
+	   }
+   </style>
 </head>
 <body>
 
@@ -51,10 +58,12 @@
 		</div>
 		<div class="form-group">
 			<form id="form1" method="post">
-				<input type="email" name="email" placeholder="E-mail" required="" class="form-control"><br/>
 				<input type="text" name="username" placeholder="Username" required="" class="form-control"><br/>
+				<input type="email" name="email" placeholder="E-mail" required="" class="form-control"><br/>
+
 				<input type="password" name="password" placeholder="Password" required="" class="form-control"><br/>
 				<input type="password" name="passwordConf" placeholder="Confirm Password" required="" class="form-control"><br/>
+
 				<input type="submit" value="Register" class="btn btn-success">
 			</form>
 		</div>

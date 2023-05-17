@@ -1,16 +1,39 @@
-
-body{
-	text-align: center !important;
-}
-p{
-	margin-top: 20px;
-	font-size: 30px;
-}
-input{
+body {
+	padding-top: 40px;
+	background-color: #f8f8f8;
+  }
+  
+  .col-md-4 {
+	margin-top: 100px;
+  }
+  
+  p {
+	font-size: 24px;
+	font-weight: bold;
 	text-align: center;
-}
-.mssg{
-	margin-top: 5px;
-	margin-bottom: 5px;
-	border-radius: 5px;
-}
+  }
+  
+  .form-control {
+	margin-bottom: 15px;
+  }
+  
+  .mssg {
+	text-align: center;
+	margin-top: 10px;
+  }
+  
+  .mssg span {
+	font-weight: bold;
+  }
+  
+  .mssg.bg-danger {
+	background-color: #ff9999;
+	color: white;
+	padding: 5px;
+	border-radius: 3px;
+  }
+  
+  span {
+	margin-right: 5px;
+  }
+  
