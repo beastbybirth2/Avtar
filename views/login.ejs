@@ -3,12 +3,14 @@
 <head>
 	<title>Login</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="./css/main.css">
 
 	<script type="text/javascript">
 		$(document).ready(function(){
+
 			$( "#form" ).submit(function(event) {
 				event.preventDefault();
 
@@ -18,148 +20,62 @@
 					data: $('#form').serialize(),
 					dataType: "json",
 					success: function(response){
+						//alert("a");
+						//console.log(response.Success);
 						$('#form')[0].reset();
+
 						document.getElementById("check").innerHTML=response.Success;
-         				setTimeout(function(){
-         					document.getElementById("check").innerHTML="";
-         				}, 3000);
-         				if (response.Success=="Success!") {
-         					document.getElementById("aa").click();
-         				};
-         			},
-         			error: function() {
-         			}
-         		})
+         					//ADD THIS CODE
+         					setTimeout(function(){
+         						document.getElementById("check").innerHTML="";
+         					},3000);
+         					if (response.Success=="Success!") {
+         						document.getElementById("aa").click();
+         					};
+         				},
+         				error: function() {
+         				}
+         			})
 			});
+
 		});
 	</script>
-	<style>
-		body {
-		   background-image: url('bg.jpeg');
-		   background-size: cover;
-	   }
-   </style>
 	
-	<style media="screen">
-	body {
-		padding-top: 40px;
-		background-color: #bf6767;
-	}
+		<style media="screen">
+  /* ... existing CSS code ... */
 
-	.col-md-4 {
-		margin-top: 100px;
-		color: rgb(0, 0, 0);
-	}
+  /* Add the following CSS for form inputs and button */
 
-	p {
-		font-size: 34px;
-		font-weight: bold;
-		text-align: center;
-		color: white;
-	}
 
-	.form-control {
-		margin-bottom: 15px;
-	}
-
-	.mssg {
-		text-align: center;
-		margin-top: 10px;
-		margin-left: 40px;
-	}
-
-	.mssg span {
-		font-weight: bold;
-		margin-left: 35px;
-	}
-
-	.mssg.bg-danger {
-		background-color: #a49fb698;
-		color: rgb(242, 59, 59);
-		padding: 5px;
-		border-radius: 3px;
-		width: 72%;
-		margin-left: 66px;
-	}
-
-	span {
-		margin-right: 10px;
-		font-size: 12px;
-		color: white;
-		padding: 5px;
-		border-radius: 3px;
-		text-align: center;
-		margin-left: 90px;
-	}
-
-	.form-group {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	input[type="text"],
-	input[type="password"],
-	input[type="submit"],
-	input[type="email"] {
-		background-color: rgba(255, 255, 255, 0.07);
-		border-radius: 3px;
-		padding: 0 100px;
-		margin-top: 8px;
-		font-size: 14px;
-		font-weight: 300;
-		height: 50px;
-		width: 100%;
-		color: #ffffff;
-		border: none;
-		outline: none;
-		width: 100%;
-		align-self: center;
-	}
-
-	input[type="submit"] {
-		margin-top: 50px;
-		background-color: #ffffff;
-		color: #080710;
-		padding: 15px 0;
-		font-size: 18px;
-		font-weight: 600;
-		border-radius: 5px;
-		cursor: pointer;
-		width: 100%;
-		align-self: center;
-	}
-
-	.form-control2 {
-		margin-bottom: 15px;
-	}
-
-	.abc {
-		font-size: 15px;
-		font-weight: bold;
-	}
-	</style>
+        body {
+            background-image: url('bg.jpeg');
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-	<div class="container">
-		<div class="col-md-4 col-md-offset-4">
-			<div>
-				<p>Login</p>
-			</div>
-			<div class="form-group">
-				<form id="form" method="post" class="form">
-					<input type="text" name="email" placeholder="E-mail" required="" class="form-control"><br/>
-					<input type="password" name="password" placeholder="Password" required="" class="form-control"><br/>
-					<input type="submit" value="Login" class="btn btn-success">
-				</form>
-			</div>
-			<div class="mssg bg-danger">
-				<span id="check"></span>
-			</div>
-			<div id="LangTable"><a href="/index" id="aa"></a></div>
-			<div><span>Do you forgot password?</span><a href="/forgetpass">Click here</a></div>
-			<div><span>Create a new Account?</span><a href="/register">Register here</a></div>
+	<div class="col-md-4 col-md-offset-4">
+		<div>
+			<p>Login</p>
 		</div>
+		<div class="form-group">
+			<form id="form" method="post" >
+				<input type="text" name="email" placeholder="E-mail" required="" class="form-control"><br/>
+				<input type="password" name="password" placeholder="Password" required="" class="form-control"><br/>
+				<input type="submit" value="Login" class="btn btn-success">
+			</form>
+		</div>
+		<div class="mssg bg-danger">
+			<span id="check" ></span>
+		</div>
+		<div id="LangTable"><a href="/index" id="aa"></a>
+		</div>
+		<div><span>Do you forgot password?</span><a href="/forgetpass">Click here</a>
+		<div><span>Create a new Account?</span><a href="/register">Register here</a>
+
+		</div>
+		
 	</div>
+
 </body>
 </html>
